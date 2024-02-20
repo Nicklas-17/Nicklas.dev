@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'mediaqueries.css' %}" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <section class="hero">
+        <header class="header">
+          <nav id="desktop-nav">
+            <div>
+              <ul class="nav-links">
+                <li><a href="#About">About</a></li>
+                <li><a href="#Experience">Experience</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <!-- <li><a href="#Contacts">Contacts</a></li> -->
+              </ul>
+            </div>
+            <div class="logo">Nicklas Kragbé</div>
+          </nav>
+          <nav id="hamburger-nav">
+            <div class="logo">Nicklas Kragbé</div>
+            <div class="hamburger-menu">
+              <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="menu-links">
+                <li><a href="#About" onclick="toggleMenu()">About</a></li>
+                <li>
+                  <a href="#Experience" onclick="toggleMenu()">Experience</a>
+                </li>
+                <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#Contacts" onclick="toggleMenu()">Contacts</a></li>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <div class="hero-content-inner">
+          <h1 class="Hero-Header-text">Full-stack</h1>
+          <div class="arrow-container">
+            <div class="arr-down"><div></div></div>
+          </div>
+          <div class="right-side-container"></div>
+        </div>
+      </section>
+
+      <section id="profile">
+        <div class="section__pic-container">
+          <img
+            src="{% static '/Assets/Profile-pic-portfolio.png'%}"
+            alt="Nicklas Kragbé Profile picture"
+          />
+        </div>
+        <div class="section__text">
+          <p class="section__text__p1">Hello, I'm</p>
+          <h1 class="title">Nicklas Kragbé</h1>
+          <p class="section__text__p2">Full-Stack Stack Developer</p>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2"
+              onclick="window.open('./static/Assets/StandinCV.pdf')"
+            >
+              Doawnload CV
+            </button>
+            <button id="contacts-button " class="btn btn-color-1">
+              Contacts
+            </button>
+          </div>
+          <div id="socials-container">
+            <a
+              href="https://www.linkedin.com/in/nicklas-kragbé-b420a617a/"
+              id="linkedinLink"
+              target="_blank"
+              ><img
+                src="./static/Assets/linkedin.png"
+                alt="My linkedin profile
+            image"
+                class="icon"
+            /></a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>
